@@ -83,8 +83,8 @@ h3 {
   text-decoration: none;
   color: #3f3f3f;
 }
- /* responsive web design */
- @media screen and (min-width: 120px) and (max-width: 1080px) {
+/* responsive web design */
+@media screen and (min-width: 120px) and (max-width: 1080px) {
   main {
     height: 100ch;
     zoom: 1.5;
