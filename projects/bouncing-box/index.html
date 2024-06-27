@@ -70,8 +70,14 @@
 			turn it around! 
 			*/
         function update() {
+          console.log(speed);
           moveBoxTo(positionX);
           positionX = positionX + speed;
+          if (positionX > boardWidth) {
+            speed = -speed;
+          } else if (positionX < 0) {
+            speed = -speed;
+          }
         }
 
         /* 
@@ -81,20 +87,14 @@
 			*/
         function handleBoxClick() {
           positionX = 0;
-          changeBoxText(points);
+          changeBoxText(1);
           points = points + 1;
-          
-          speed = speed + 10;
-          positionX = 50;
-          boardWidth = 200;
-          speed = 100;
-
-          positionX = 150;
-          boardWidth = 200;
-
-          positionX = 250;
-          boardWidth = 200;
-          speed = 100;
+          changeBoxText(points);
+          if (speed < 0) {
+            speed = speed - 3;
+          } else if (speed > 0) {
+            speed = speed + 3;
+          }
         }
       })();
     </script>
