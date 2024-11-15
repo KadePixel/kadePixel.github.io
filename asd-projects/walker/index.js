@@ -39,7 +39,7 @@ function runProgram() {
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    repositionGameItem();
+    repositionGameitem();
     wallCollision();
     redrawGameItem();
   }
@@ -54,7 +54,7 @@ function runProgram() {
     if (event.which === KEY.DOWN) {
       walker.speedY = 0;
     }
-    if (event / which === KEY.LEFT) {
+    if (event.which === KEY.LEFT) {
       walker.speedX = 0;
     }
     if (event.which === KEY.RIGHT) {
@@ -104,23 +104,23 @@ function runProgram() {
     $("#walker").css("top", walker.cordinateY);
   }
   function wallCollision() {
-    const bottomSide = "#board".height() - $("#walker").height();
-    const rightSide = "#board".width() - $("#walker").width();
+    const bottomSide = $("#board").height() - $("#walker").height();
+    const rightSide = $("#board").width() - $("#walker").width();
 
     if (walker.cordinateX < 0) {
       walker.cordinateX = 0;
     }
 
     if (walker.cordinateY < 0) {
-      walker.cordinateY - 0;
+      walker.cordinateY = 0;
     }
 
-    if (walker.cordinateX > rightSdie) {
+    if (walker.cordinateX > rightSide) {
       walker.cordinateX = rightSide;
     }
 
     if (walker.cordinateY > bottomSide) {
-      walker.cordinateY = bottomSide;
+      walker.cordinateY = bottomSide
     }
   }
 }
