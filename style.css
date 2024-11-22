@@ -1,17 +1,17 @@
 body {
-  background: rgb(11, 60, 40);
-  color: rgb(28, 139, 95);
+  background: rgb(250, 255, 118);
+  color: rgb(250, 255, 118);
   padding: 10px;
-  font-family: Papyrus;
+  font-family: Monaco;
 }
 #all-contents {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
 /* navigation menu */
 nav {
-  background:rgb(61, 111, 82);
+  background:rgb(244, 92, 92);
   margin: 0 auto;
   margin-bottom: 20px;
   display: flex;
@@ -20,7 +20,7 @@ nav {
 h1 {
   display: flex;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgb(250, 255, 118);
   flex: 1;
   margin: 0;
 }
@@ -33,13 +33,13 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #bdfe5c;
+  color: #e5ff89;
 }
 
 /* main container area beneath menu */
 main {
-  background: rgb(238, 255, 221);
-  display: flex;
+  background: rgb(60, 112, 255);
+  display: flex
 }
 .sidebar {
   margin-right: 25px;
@@ -55,8 +55,8 @@ main {
 
 /* portfolio styles */
 #interests {
-  border: 4px silver ridge;
-  padding: 8px;
+  border: 9px rgb(216, 255, 143) ridge;
+  padding: 10px;
 }
 h2,
 h3 {
@@ -64,14 +64,14 @@ h3 {
 }
 /* portfolio styles */
 .content h1 {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 #portfolio {
   list-style-type: none;
   padding-left: 0;
 }
 #portfolio li {
-  background: #fff;
+  background: #4e9afd;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -80,8 +80,9 @@ h3 {
   background: #ffffff;
 }
 #portfolio a {
-  text-decoration: none;
-  color: #3f3f3f;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  color: #ffffff;
 }
 /* responsive web design */
 @media screen and (min-width: 120px) and (max-width: 1080px) {
@@ -124,7 +125,7 @@ h3 {
 
   p,
   li {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .content {
