@@ -85,17 +85,17 @@ $(document).ready(function () {
     // loop over the circles array. We use the maxCircles variable instead of circles.length
     // to make seeing issues in the debugger slightly easier (in practice, you should use
     // circles.length, but do NOT change it here)
-    for (var i = 0; i < maxCircles; i++) {
-      var circles = maxCircles[i];
+    for (var i = 0; i < circles.length; i++) {
+      var circle = circles[i];
 
       // move the circle
-      moveCircle(circles);
+      moveCircle(circle);
 
       // bounce the circle, if it hits a wall
-      bounceCircle(circles);
+      bounceCircle(circle);
 
       // redraw the circle on the screen after it moves
-      updateCircleOnScreen(circles);
+      updateCircleOnScreen(circle);
     }
   }
 
@@ -105,7 +105,7 @@ $(document).ready(function () {
 
   // this moves circles in memory but doesn't update them on the screen
   function moveCircle(circle) {
-    circle.x = circle.speedX;
+    circle.x += circle.speedX;
     circle.y += circle.speedY;
   }
 
@@ -129,7 +129,7 @@ $(document).ready(function () {
     // this bounces off the bottom wall
     else if (circle.y > boardHeight) {
       circle.y -= circle.speedY;
-      circle.speedX *= -1;
+      circle.speedY *= -1;
     }
   }
 
