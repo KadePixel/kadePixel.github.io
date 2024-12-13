@@ -118,7 +118,12 @@ function moveSnake() {
   of snake.head.direction which may be one of "left", "right", "up", or "down"
   */
 }
-
+if (snake.head.direction === "left") {
+  snake.head.column = snake.head.column - 1;
+} else if (snake.head.direction === "right"){
+snake.head.column = snake.head.column + 1;
+}
+repositionSquare(snake.head);
 function hasHitWall() {
   /* 
   TODO 8: Should return true if the snake's head has collided with the four walls of the
